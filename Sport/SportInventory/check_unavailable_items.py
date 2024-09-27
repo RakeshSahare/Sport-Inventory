@@ -21,7 +21,7 @@ def get_unavailable_items():
                 filename = os.path.join(directory, f'unavailable_items_{time_stamp}.json')
 
                 with open(filename, 'w') as f:
-                    #json.dump(items, f, indent=4)
+                    json.dump(items, f, indent=4)
                     print("File created")
         else:
             print("Error fetching unavailable items")
@@ -30,4 +30,4 @@ def get_unavailable_items():
 
 while True:
     get_unavailable_items()
-    time.sleep(2)
+    time.sleep(60)
